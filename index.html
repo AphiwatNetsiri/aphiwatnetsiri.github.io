@@ -4,29 +4,120 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Aphiwat • GitHub Pages</title>
+  <meta name="description" content="Personal site for Week01 assignment" />
   <style>
-    *{box-sizing:border-box} body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial}
-    .wrap{min-height:100vh;display:flex;align-items:center;justify-content:center;background:#f6f7fb}
-    .card{background:#fff;max-width:720px;width:92%;padding:32px;border-radius:16px;
-          box-shadow:0 10px 30px rgba(0,0,0,.08)}
-    h1{margin:0 0 8px;font-size:28px}
-    p{margin:6px 0 0;color:#444;line-height:1.7}
-    .meta{margin-top:16px;font-size:14px;color:#666}
-    .btn{display:inline-block;margin-top:20px;padding:10px 16px;border-radius:10px;
-         text-decoration:none;border:1px solid #e5e7eb}
-    .btn:hover{background:#f3f4f6}
+    :root{
+      --bg:#0f172a;        /* slate-900 */
+      --card:#0b1222cc;    /* translucent card */
+      --text:#e5e7eb;      /* slate-200 */
+      --muted:#9ca3af;     /* slate-400 */
+      --accent:#7c3aed;    /* violet-600 */
+      --accent2:#06b6d4;   /* cyan-500 */
+      --border:#1f2937;    /* slate-800 */
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans Thai",Arial;
+      color:var(--text);
+      background:
+        radial-gradient(60rem 60rem at 10% 10%, #1e293b 0%, transparent 60%),
+        radial-gradient(40rem 40rem at 90% 20%, #0ea5e9 0%, transparent 50%),
+        radial-gradient(30rem 30rem at 80% 80%, #7c3aed44 0%, transparent 60%),
+        var(--bg);
+    }
+    .wrap{min-height:100%;display:flex;align-items:center;justify-content:center;padding:32px}
+    .card{
+      width:min(880px, 95vw);
+      background:linear-gradient(180deg, #0b1222ee, #0b1222cc);
+      border:1px solid var(--border);
+      border-radius:20px;padding:28px 28px 24px;
+      box-shadow:0 10px 30px rgba(0,0,0,.35), inset 0 1px 0 rgba(255,255,255,.03);
+      backdrop-filter: blur(6px);
+    }
+    .header{display:flex;gap:18px;align-items:center;margin-bottom:10px}
+    .avatar{
+      width:64px;height:64px;border-radius:16px;border:1px solid var(--border);
+      background:linear-gradient(135deg, var(--accent), var(--accent2));
+      display:inline-grid;place-items:center;font-weight:700;color:white
+    }
+    h1{margin:0;font-size:28px;line-height:1.2}
+    .muted{color:var(--muted)}
+    .grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:18px}
+    @media (max-width:720px){ .grid{grid-template-columns:1fr} }
+    .section{
+      border:1px solid var(--border);border-radius:14px;padding:16px;background:#0b122244
+    }
+    .section h2{margin:0 0 8px;font-size:18px}
+    ul{margin:8px 0 0 18px;padding:0}
+    a{color:#a78bfa;text-decoration:none}
+    a:hover{text-decoration:underline}
+    .btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+    .btn{
+      padding:10px 14px;border-radius:12px;border:1px solid var(--border);
+      background:#111827;color:var(--text);text-decoration:none;font-weight:600
+    }
+    .btn:hover{background:#1f2937}
+    .footer{margin-top:20px;font-size:12px;color:var(--muted);text-align:center}
+    .badge{
+      display:inline-block;padding:4px 8px;border:1px solid var(--border);
+      border-radius:999px;font-size:12px;background:#0b122255;margin-left:8px
+    }
   </style>
 </head>
 <body>
   <main class="wrap">
-    <section class="card">
-      <h1>สวัสดีครับ ผมอภิวัฒน์ เนตรศิริ</h1>
-      <p>นี่คือหน้า <strong>GitHub Pages</strong> สำหรับงาน <strong>Week01</strong></p>
-      <div class="meta">
-        รหัสนักศึกษา: 66114540861 · อีเมล: <a href="mailto:aphiwat.ne.66@ubu.ac.th">aphiwat.ne.66@ubu.ac.th</a>
+    <article class="card" role="article" aria-labelledby="title">
+      <header class="header">
+        <div class="avatar" aria-hidden="true">AN</div>
+        <div>
+          <h1 id="title">Aphiwat Netsiri <span class="badge">DSSI • UBU</span></h1>
+          <div class="muted">Week01 • Personal GitHub Pages</div>
+        </div>
+      </header>
+
+      <div class="grid">
+        <section class="section">
+          <h2>About</h2>
+          <p>
+            สวัสดีครับ ผม <strong>อภิวัฒน์ เนตรศิริ</strong> (รหัส <strong>66114540861</strong>)  
+            หน้านี้ใช้ส่งงาน <em>Week01 Assignment</em> และเป็น landing page ส่วนตัวบน GitHub Pages
+          </p>
+          <div class="btns">
+            <a class="btn" href="mailto:aphiwat.ne.66@ubu.ac.th">✉️ Email</a>
+            <a class="btn" href="https://github.com/AphiwatNetsiri" target="_blank" rel="noopener">🌐 GitHub Profile</a>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>Contacts</h2>
+          <ul>
+            <li><strong>Email:</strong> <a href="mailto:aphiwat.ne.66@ubu.ac.th">aphiwat.ne.66@ubu.ac.th</a></li>
+            <li><strong>Website:</strong> <a href="https://aphiwatnetsiri.github.io">aphiwatnetsiri.github.io</a></li>
+            <li><strong>GitHub:</strong> <a href="https://github.com/AphiwatNetsiri">@AphiwatNetsiri</a></li>
+          </ul>
+        </section>
+
+        <section class="section">
+          <h2>Highlights</h2>
+          <ul>
+            <li>GitHub Pages พร้อมใช้งาน (HTML/CSS Static)</li>
+            <li>โครงสร้างหน้าแบบ Card • Responsive</li>
+            <li>อัปเดต/ปรับแต่งได้ง่ายภายในไฟล์เดียว</li>
+          </ul>
+        </section>
+
+        <section class="section">
+          <h2>How to Update</h2>
+          <ul>
+            <li>แก้ไขไฟล์ <code>index.html</code> แล้วกด <em>Commit changes</em></li>
+            <li>รีเฟรชหน้าเว็บ: <a href="https://aphiwatnetsiri.github.io">aphiwatnetsiri.github.io</a></li>
+          </ul>
+        </section>
       </div>
-      <a class="btn" href="https://github.com/AphiwatNetsiri" target="_blank" rel="noopener">ไปที่ GitHub Profile</a>
-    </section>
+
+      <p class="footer">© 2025 Aphiwat Netsiri • Built for Week01</p>
+    </article>
   </main>
 </body>
 </html>
