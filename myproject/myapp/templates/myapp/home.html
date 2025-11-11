@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XXX YYY - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap');
+        
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            animation: gradient 15s ease infinite;
+            background-size: 200% 200%;
+        }
+
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(102, 126, 234, 0.3);
+        }
+
+        .floating {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .emoji-animate {
+            display: inline-block;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white overflow-x-hidden">
+    
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full backdrop-blur-md bg-black/30 z-50 border-b border-purple-500/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold gradient-text">XXX YYY</div>
+            <div class="hidden md:flex gap-8">
+                <a href="#about" class="hover:text-purple-400 transition">About</a>
+                <a href="#interests" class="hover:text-purple-400 transition">Interests</a>
+                <a href="#contact" class="hover:text-purple-400 transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center px-4 pt-20">
+        <div class="text-center">
+            <!-- Animated Emoji -->
+            <div class="mb-8 flex justify-center gap-3">
+                <span class="emoji-animate text-6xl">🎓</span>
+                <span class="emoji-animate text-6xl" style="animation-delay: 0.1s;">💻</span>
+                <span class="emoji-animate text-6xl" style="animation-delay: 0.2s;">✨</span>
+            </div>
+
+            <h1 class="text-6xl md:text-8xl font-bold mb-6 gradient-text leading-tight">
+                Hey, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-purple-400 to-cyan-400">XXX YYY</span>
+            </h1>
+
+            <p class="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                A passionate <span class="text-purple-400 font-semibold">2nd Year Student</span> at 
+                <span class="text-cyan-400 font-semibold">Ubon Ratchathani University</span>
+            </p>
+
+            <div class="mb-8">
+                <p class="text-lg text-gray-400">Majoring in</p>
+                <p class="text-3xl font-bold gradient-text">Data Science & Software Innovation</p>
+            </div>
+
+            <!-- CTA Buttons -->
+            <div class="flex flex-col md:flex-row gap-4 justify-center mb-12">
+                <a href="#about" class="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full font-semibold hover:shadow-lg hover:shadow-purple-500/50 transition transform hover:scale-105">
+                    Learn More
+                </a>
+                <a href="#contact" class="px-8 py-4 border-2 border-purple-400 rounded-full font-semibold hover:bg-purple-400 hover:text-black transition">
+                    Get in Touch
+                </a>
+            </div>
+
+            <!-- Scroll Indicator -->
+            <div class="animate-bounce text-2xl">↓</div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 px-4">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-5xl font-bold mb-12 text-center gradient-text">About Me</h2>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <!-- Left Content -->
+                <div class="space-y-6">
+                    <p class="text-lg text-gray-300 leading-relaxed">
+                        I'm a passionate developer and tech enthusiast currently pursuing my degree at Ubon Ratchathani University. 
+                        My journey in <span class="text-purple-400 font-semibold">Data Science</span> and 
+                        <span class="text-cyan-400 font-semibold">Software Innovation</span> has shaped my vision for creating 
+                        meaningful solutions through technology.
+                    </p>
+                    
+                    <p class="text-lg text-gray-300 leading-relaxed">
+                        Beyond coding and data analysis, I'm deeply passionate about continuous learning and innovation. 
+                        I believe in combining creativity with technical expertise to build solutions that make a real impact.
+                    </p>
+
+                    <div class="pt-4">
+                        <h3 class="text-2xl font-bold mb-4 text-purple-400">Skills</h3>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="px-4 py-2 bg-purple-500/30 rounded-full border border-purple-500/50">Python</span>
+                            <span class="px-4 py-2 bg-purple-500/30 rounded-full border border-purple-500/50">Data Science</span>
+                            <span class="px-4 py-2 bg-purple-500/30 rounded-full border border-purple-500/50">Web Development</span>
+                            <span class="px-4 py-2 bg-purple-500/30 rounded-full border border-purple-500/50">Machine Learning</span>
+                            <span class="px-4 py-2 bg-purple-500/30 rounded-full border border-purple-500/50">HTML/CSS</span>
+                            <span class="px-4 py-2 bg-purple-500/30 rounded-full border border-purple-500/50">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Content - Interactive Card -->
+                <div x-data="{ hovering: false }" @mouseenter="hovering = true" @mouseleave="hovering = false"
+                     class="relative card-hover">
+                    <div class="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl blur-2xl opacity-50"></div>
+                    <div class="relative bg-black/40 backdrop-blur-xl p-8 rounded-3xl border border-purple-500/30">
+                        <div class="text-6xl mb-4">🎯</div>
+                        <h3 class="text-2xl font-bold mb-4 text-cyan-400">My Mission</h3>
+                        <p class="text-gray-300">
+                            To harness the power of data and innovation to create solutions that inspire and transform industries.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interests Section -->
+    <section id="interests" class="py-20 px-4 bg-black/20">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-5xl font-bold mb-12 text-center gradient-text">What I Love</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Dogs Card -->
+                <div class="card-hover group">
+                    <div class="bg-gradient-to-br from-yellow-500/20 to-orange-500/20 p-8 rounded-2xl border border-yellow-500/30 h-full">
+                        <div class="text-6xl mb-4 inline-block group-hover:scale-110 transition">🐕</div>
+                        <h3 class="text-2xl font-bold mb-4 text-yellow-400">Dogs</h3>
+                        <p class="text-gray-300">
+                            Man's best friend! I love the loyalty, joy, and unconditional love that dogs bring to our lives. 
+                            Whether it's playful puppies or wise old companions, they always make my day brighter.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Cats Card -->
+                <div class="card-hover group">
+                    <div class="bg-gradient-to-br from-pink-500/20 to-purple-500/20 p-8 rounded-2xl border border-pink-500/30 h-full">
+                        <div class="text-6xl mb-4 inline-block group-hover:scale-110 transition">🐱</div>
+                        <h3 class="text-2xl font-bold mb-4 text-pink-400">Cats</h3>
+                        <p class="text-gray-300">
+                            Independent, mysterious, and adorable. Cats have a unique charm that captivates anyone 
+                            who takes a moment to appreciate their grace and personality.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Anime Card -->
+                <div class="card-hover group">
+                    <div class="bg-gradient-to-br from-blue-500/20 to-cyan-500/20 p-8 rounded-2xl border border-blue-500/30 h-full">
+                        <div class="text-6xl mb-4 inline-block group-hover:scale-110 transition">✨</div>
+                        <h3 class="text-2xl font-bold mb-4 text-blue-400">Anime</h3>
+                        <p class="text-gray-300">
+                            The art, storytelling, and creativity in anime inspire me daily. From epic adventures to heartwarming 
+                            moments, anime is where imagination comes to life.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-5xl font-bold mb-8 gradient-text">Let's Connect!</h2>
+            
+            <p class="text-lg text-gray-300 mb-12">
+                I'm always excited to meet new people and explore opportunities for collaboration. 
+                Feel free to reach out!
+            </p>
+
+            <div class="flex flex-col md:flex-row gap-6 justify-center mb-12">
+                <a href="mailto:your.email@example.com" class="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full font-semibold hover:shadow-lg hover:shadow-purple-500/50 transition transform hover:scale-105">
+                    📧 Send Email
+                </a>
+                <a href="https://github.com" target="_blank" class="px-8 py-4 border-2 border-purple-400 rounded-full font-semibold hover:bg-purple-400 hover:text-black transition">
+                    💻 GitHub
+                </a>
+                <a href="https://linkedin.com" target="_blank" class="px-8 py-4 border-2 border-cyan-400 rounded-full font-semibold hover:bg-cyan-400 hover:text-black transition">
+                    💼 LinkedIn
+                </a>
+            </div>
+
+            <!-- Alpine.js Interactive Form -->
+            <div x-data="{ email: '', message: '', submitted: false }" class="bg-black/40 backdrop-blur-xl p-8 rounded-2xl border border-purple-500/30 max-w-2xl mx-auto">
+                <form @submit.prevent="submitted = true; setTimeout(() => submitted = false, 3000)">
+                    <div class="mb-6">
+                        <input x-model="email" type="email" placeholder="Your Email" required
+                            class="w-full px-4 py-3 bg-purple-500/10 border border-purple-500/30 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-purple-500">
+                    </div>
+                    <div class="mb-6">
+                        <textarea x-model="message" placeholder="Your Message" rows="4" required
+                            class="w-full px-4 py-3 bg-purple-500/10 border border-purple-500/30 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-purple-500"></textarea>
+                    </div>
+                    <button type="submit" class="w-full px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg font-semibold hover:shadow-lg hover:shadow-purple-500/50 transition">
+                        Send Message
+                    </button>
+                    <div x-show="submitted" x-transition class="mt-4 text-green-400 font-semibold">
+                        ✅ Message sent! I'll get back to you soon.
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-purple-500/20 py-8 px-4 text-center text-gray-400">
+        <p>© 2025 XXX YYY | Built with passion, creativity, and code ❤️</p>
+        <p class="text-sm mt-2">Ubon Ratchathani University • Data Science & Software Innovation</p>
+    </footer>
+
+    <!-- Smooth Scroll -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
